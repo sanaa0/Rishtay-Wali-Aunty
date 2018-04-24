@@ -1,0 +1,19 @@
+c:\users\elitebook\documents\visual studio 2015\Projects\searchRishtas\searchRishtas\bin\Debug\searchRishtas.exe.config
+c:\users\elitebook\documents\visual studio 2015\Projects\searchRishtas\searchRishtas\obj\Debug\searchRishtas.csprojResolveAssemblyReference.cache
+c:\users\elitebook\documents\visual studio 2015\Projects\searchRishtas\searchRishtas\obj\Debug\searchRishtas.searchRishtas.resources
+c:\users\elitebook\documents\visual studio 2015\Projects\searchRishtas\searchRishtas\obj\Debug\searchRishtas.Properties.Resources.resources
+c:\users\elitebook\documents\visual studio 2015\Projects\searchRishtas\searchRishtas\obj\Debug\searchRishtas.csproj.GenerateResource.Cache
+C:\Users\Elitebook\Documents\Visual Studio 2015\Projects\searchRishtas\searchRishtas\bin\Debug\searchRishtas.exe
+C:\Users\Elitebook\Documents\Visual Studio 2015\Projects\searchRishtas\searchRishtas\bin\Debug\searchRishtas.pdb
+C:\Users\Elitebook\Documents\Visual Studio 2015\Projects\searchRishtas\searchRishtas\obj\Debug\searchRishtas.exe
+C:\Users\Elitebook\Documents\Visual Studio 2015\Projects\searchRishtas\searchRishtas\obj\Debug\searchRishtas.pdb
+C:\Users\Home\Desktop\24 april 12 23\searchRishtas\searchRishtas\bin\Debug\searchRishtas.exe.config
+C:\Users\Home\Desktop\24 april 12 23\searchRishtas\searchRishtas\obj\Debug\searchRishtas.exe
+C:\Users\Home\Desktop\24 april 12 23\searchRishtas\searchRishtas\obj\Debug\searchRishtas.pdb
+C:\Users\Home\Desktop\24 april 12 23\searchRishtas\searchRishtas\bin\Debug\searchRishtas.exe
+C:\Users\Home\Desktop\24 april 12 23\searchRishtas\searchRishtas\bin\Debug\searchRishtas.pdb
+C:\Users\Home\Desktop\24 april 12 23\searchRishtas\searchRishtas\obj\Debug\searchRishtas.csprojResolveAssemblyReference.cache
+C:\Users\Home\Desktop\24 april 12 23\searchRishtas\searchRishtas\obj\Debug\searchRishtas.searchRishtas.resources
+C:\Users\Home\Desktop\24 april 12 23\searchRishtas\searchRishtas\obj\Debug\searchRishtas.Properties.Resources.resources
+C:\Users\Home\Desktop\24 april 12 23\searchRishtas\searchRishtas\obj\Debug\searchRishtas.viewProfile.resources
+C:\Users\Home\Desktop\24 april 12 23\searchRishtas\searchRishtas\obj\Debug\searchRishtas.csproj.GenerateResource.Cache

@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:51428/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:51428/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:51428/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/serveraunty" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDataUsingDataContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDataUsingDataContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addrishtaof_InputMessage">
+    <wsdl:part name="parameters" element="tns:addrishtaof" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addrishtaof_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addrishtaofResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleterishtaof_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleterishtaof" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleterishtaof_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleterishtaofResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_loginof_InputMessage">
+    <wsdl:part name="parameters" element="tns:loginof" />
+  </wsdl:message>
+  <wsdl:message name="IService1_loginof_OutputMessage">
+    <wsdl:part name="parameters" element="tns:loginofResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_editprofileof_InputMessage">
+    <wsdl:part name="parameters" element="tns:editprofileof" />
+  </wsdl:message>
+  <wsdl:message name="IService1_editprofileof_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editprofileofResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_approverishtaof_InputMessage">
+    <wsdl:part name="parameters" element="tns:approverishtaof" />
+  </wsdl:message>
+  <wsdl:message name="IService1_approverishtaof_OutputMessage">
+    <wsdl:part name="parameters" element="tns:approverishtaofResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getRishtas_InputMessage">
+    <wsdl:part name="parameters" element="tns:getRishtas" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getRishtas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getRishtasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getpaymentof_InputMessage">
+    <wsdl:part name="parameters" element="tns:getpaymentof" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getpaymentof_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getpaymentofResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_seekofrishta_InputMessage">
+    <wsdl:part name="parameters" element="tns:seekofrishta" />
+  </wsdl:message>
+  <wsdl:message name="IService1_seekofrishta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:seekofrishtaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_allowofdetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:allowofdetails" />
+  </wsdl:message>
+  <wsdl:message name="IService1_allowofdetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:allowofdetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_regofadmin_InputMessage">
+    <wsdl:part name="parameters" element="tns:regofadmin" />
+  </wsdl:message>
+  <wsdl:message name="IService1_regofadmin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:regofadminResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_loginofadmin_InputMessage">
+    <wsdl:part name="parameters" element="tns:loginofadmin" />
+  </wsdl:message>
+  <wsdl:message name="IService1_loginofadmin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:loginofadminResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addrishtatobeapprovedof_InputMessage">
+    <wsdl:part name="parameters" element="tns:addrishtatobeapprovedof" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addrishtatobeapprovedof_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addrishtatobeapprovedofResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="GetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataResponse" message="tns:IService1_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContract" message="tns:IService1_GetDataUsingDataContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContractResponse" message="tns:IService1_GetDataUsingDataContract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addrishtaof">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/addrishtaof" message="tns:IService1_addrishtaof_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/addrishtaofResponse" message="tns:IService1_addrishtaof_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleterishtaof">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/deleterishtaof" message="tns:IService1_deleterishtaof_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/deleterishtaofResponse" message="tns:IService1_deleterishtaof_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="loginof">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/loginof" message="tns:IService1_loginof_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/loginofResponse" message="tns:IService1_loginof_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editprofileof">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/editprofileof" message="tns:IService1_editprofileof_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/editprofileofResponse" message="tns:IService1_editprofileof_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="approverishtaof">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/approverishtaof" message="tns:IService1_approverishtaof_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/approverishtaofResponse" message="tns:IService1_approverishtaof_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getRishtas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getRishtas" message="tns:IService1_getRishtas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getRishtasResponse" message="tns:IService1_getRishtas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getpaymentof">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getpaymentof" message="tns:IService1_getpaymentof_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getpaymentofResponse" message="tns:IService1_getpaymentof_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="seekofrishta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/seekofrishta" message="tns:IService1_seekofrishta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/seekofrishtaResponse" message="tns:IService1_seekofrishta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="allowofdetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/allowofdetails" message="tns:IService1_allowofdetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/allowofdetailsResponse" message="tns:IService1_allowofdetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="regofadmin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/regofadmin" message="tns:IService1_regofadmin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/regofadminResponse" message="tns:IService1_regofadmin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="loginofadmin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/loginofadmin" message="tns:IService1_loginofadmin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/loginofadminResponse" message="tns:IService1_loginofadmin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addrishtatobeapprovedof">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/addrishtatobeapprovedof" message="tns:IService1_addrishtatobeapprovedof_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/addrishtatobeapprovedofResponse" message="tns:IService1_addrishtatobeapprovedof_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetDataUsingDataContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addrishtaof">
+      <soap:operation soapAction="http://tempuri.org/IService1/addrishtaof" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleterishtaof">
+      <soap:operation soapAction="http://tempuri.org/IService1/deleterishtaof" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loginof">
+      <soap:operation soapAction="http://tempuri.org/IService1/loginof" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editprofileof">
+      <soap:operation soapAction="http://tempuri.org/IService1/editprofileof" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="approverishtaof">
+      <soap:operation soapAction="http://tempuri.org/IService1/approverishtaof" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRishtas">
+      <soap:operation soapAction="http://tempuri.org/IService1/getRishtas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getpaymentof">
+      <soap:operation soapAction="http://tempuri.org/IService1/getpaymentof" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="seekofrishta">
+      <soap:operation soapAction="http://tempuri.org/IService1/seekofrishta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="allowofdetails">
+      <soap:operation soapAction="http://tempuri.org/IService1/allowofdetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="regofadmin">
+      <soap:operation soapAction="http://tempuri.org/IService1/regofadmin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="loginofadmin">
+      <soap:operation soapAction="http://tempuri.org/IService1/loginofadmin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addrishtatobeapprovedof">
+      <soap:operation soapAction="http://tempuri.org/IService1/addrishtatobeapprovedof" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:51428/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

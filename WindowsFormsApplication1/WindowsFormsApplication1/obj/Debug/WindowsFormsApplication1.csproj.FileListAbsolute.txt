@@ -93,31 +93,3 @@ C:\Users\Home\Desktop\4 5 18\RegisterationOfUser\WindowsFormsApplication1\Window
 C:\Users\Home\Desktop\4 5 18\RegisterationOfUser\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.regreq.resources
 C:\Users\Home\Desktop\4 5 18\RegisterationOfUser\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
 C:\Users\Home\Desktop\4 5 18\RegisterationOfUser\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.paid.resources
-C:\Users\folio 9470m\Videos\4 5 18\RegisterationOfUser\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
-C:\Users\folio 9470m\Videos\4 5 18\RegisterationOfUser\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
-C:\Users\folio 9470m\Videos\4 5 18\RegisterationOfUser\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
-C:\Users\folio 9470m\Videos\4 5 18\RegisterationOfUser\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
-C:\Users\folio 9470m\Videos\4 5 18\RegisterationOfUser\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.adminaprovaltologin.resources
-C:\Users\folio 9470m\Videos\4 5 18\RegisterationOfUser\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.details.resources
-C:\Users\folio 9470m\Videos\4 5 18\RegisterationOfUser\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form5.resources
-C:\Users\folio 9470m\Videos\4 5 18\RegisterationOfUser\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.form7.resources
-C:\Users\folio 9470m\Videos\4 5 18\RegisterationOfUser\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.paid.resources
-C:\Users\folio 9470m\Videos\4 5 18\RegisterationOfUser\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
-C:\Users\folio 9470m\Videos\4 5 18\RegisterationOfUser\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.regreq.resources
-C:\Users\folio 9470m\Videos\4 5 18\RegisterationOfUser\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
-C:\Users\folio 9470m\Videos\4 5 18\RegisterationOfUser\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
-C:\Users\folio 9470m\Videos\4 5 18\RegisterationOfUser\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
-C:\Users\Home\Desktop\sana masood\RegisterationOfUser\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
-C:\Users\Home\Desktop\sana masood\RegisterationOfUser\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
-C:\Users\Home\Desktop\sana masood\RegisterationOfUser\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
-C:\Users\Home\Desktop\sana masood\RegisterationOfUser\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.adminaprovaltologin.resources
-C:\Users\Home\Desktop\sana masood\RegisterationOfUser\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.details.resources
-C:\Users\Home\Desktop\sana masood\RegisterationOfUser\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form5.resources
-C:\Users\Home\Desktop\sana masood\RegisterationOfUser\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.form7.resources
-C:\Users\Home\Desktop\sana masood\RegisterationOfUser\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.paid.resources
-C:\Users\Home\Desktop\sana masood\RegisterationOfUser\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
-C:\Users\Home\Desktop\sana masood\RegisterationOfUser\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.regreq.resources
-C:\Users\Home\Desktop\sana masood\RegisterationOfUser\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
-C:\Users\Home\Desktop\sana masood\RegisterationOfUser\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
-C:\Users\Home\Desktop\sana masood\RegisterationOfUser\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
-C:\Users\Home\Desktop\sana masood\RegisterationOfUser\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache

@@ -19,7 +19,6 @@
       <xs:element minOccurs="0" name="Rishtacame" type="xs:boolean" />
       <xs:element minOccurs="0" name="Sitatuss" type="xs:boolean" />
       <xs:element minOccurs="0" name="Status" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Statuss" type="xs:boolean" />
       <xs:element minOccurs="0" name="approvedlist" nillable="true" type="tns:ArrayOfRISHTA" />
       <xs:element minOccurs="0" name="receivedlist" nillable="true" type="tns:ArrayOfRISHTA" />
       <xs:element minOccurs="0" name="sentlist" nillable="true" type="tns:ArrayOfRISHTA" />

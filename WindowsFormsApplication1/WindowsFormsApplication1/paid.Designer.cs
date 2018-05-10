@@ -33,17 +33,17 @@
             this.payment = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.rISHTABindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sentlistBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paid_status = new System.Windows.Forms.DataGridViewButtonColumn();
             this.ALLOW_ACCESS = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.sentlistBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rISHTABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rISHTABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sentlistBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rISHTABindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -86,35 +86,7 @@
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.Size = new System.Drawing.Size(345, 269);
             this.dataGridView3.TabIndex = 6;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(12, 447);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(74, 13);
-            this.linkLabel1.TabIndex = 7;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "back to profile";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(453, 447);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "give access";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // rISHTABindingSource
-            // 
-            this.rISHTABindingSource.DataSource = typeof(WindowsFormsApplication1.serveraunty.RISHTA);
-            // 
-            // sentlistBindingSource
-            // 
-            this.sentlistBindingSource.DataMember = "sentlist";
-            this.sentlistBindingSource.DataSource = this.rISHTABindingSource;
+            this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -138,6 +110,35 @@
             this.ALLOW_ACCESS.Text = "ALLOW ACCESS";
             this.ALLOW_ACCESS.UseColumnTextForButtonValue = true;
             // 
+            // sentlistBindingSource
+            // 
+            this.sentlistBindingSource.DataMember = "sentlist";
+            this.sentlistBindingSource.DataSource = this.rISHTABindingSource;
+            // 
+            // rISHTABindingSource
+            // 
+            this.rISHTABindingSource.DataSource = typeof(WindowsFormsApplication1.serveraunty.RISHTA);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(12, 447);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(74, 13);
+            this.linkLabel1.TabIndex = 7;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "back to profile";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(453, 447);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "give access";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // paid
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -154,8 +155,8 @@
             this.Load += new System.EventHandler(this.paid_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rISHTABindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sentlistBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rISHTABindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

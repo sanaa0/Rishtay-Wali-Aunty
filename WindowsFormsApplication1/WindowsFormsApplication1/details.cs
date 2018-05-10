@@ -18,7 +18,6 @@ namespace WindowsFormsApplication1
             InitializeComponent();
             r = rishta ;
         }
-        public serveraunty.RISHTA r1 = new serveraunty.RISHTA();
 
         private void details_Load(object sender, EventArgs e)
         {

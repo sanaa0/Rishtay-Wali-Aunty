@@ -31,7 +31,6 @@ namespace WindowsFormsApplication1
             r3.Name = "shabana";
             r4.Name = "salma";
 
-            
             yo.addpes(r1);
             yo.addpes(r2);
             yo.addper(r3);
@@ -121,6 +120,11 @@ namespace WindowsFormsApplication1
             serveraunty.Service1 yo = new serveraunty.Service1();
             MessageBox.Show("ACCESS GRANTED");
             yo.allowofdetails();
+        }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

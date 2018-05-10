@@ -394,11 +394,9 @@ namespace WindowsFormsApplication1.serveraunty {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/fromtobetodone", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void fromtobetodone([System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/serveraunty")] RISHTA[] roo, out bool fromtobetodoneResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool fromtobetodoneResultSpecified) {
-            object[] results = this.Invoke("fromtobetodone", new object[] {
+        public void fromtobetodone([System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/serveraunty")] RISHTA[] roo) {
+            this.Invoke("fromtobetodone", new object[] {
                         roo});
-            fromtobetodoneResult = ((bool)(results[0]));
-            fromtobetodoneResultSpecified = ((bool)(results[1]));
         }
         
         /// <remarks/>
@@ -418,7 +416,7 @@ namespace WindowsFormsApplication1.serveraunty {
         private void OnfromtobetodoneOperationCompleted(object arg) {
             if ((this.fromtobetodoneCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.fromtobetodoneCompleted(this, new fromtobetodoneCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.fromtobetodoneCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -988,19 +986,15 @@ namespace WindowsFormsApplication1.serveraunty {
         
         private bool statusFieldSpecified;
         
-        private bool statussField;
-        
-        private bool statussFieldSpecified;
-        
         private RISHTA[] approvedlistField;
         
         private RISHTA[] receivedlistField;
         
         private RISHTA[] sentlistField;
         
-        private bool statussField1;
+        private bool statussField;
         
-        private bool statussField1Specified;
+        private bool statussFieldSpecified;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -1230,27 +1224,6 @@ namespace WindowsFormsApplication1.serveraunty {
         }
         
         /// <remarks/>
-        public bool Statuss {
-            get {
-                return this.statussField;
-            }
-            set {
-                this.statussField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool StatussSpecified {
-            get {
-                return this.statussFieldSpecified;
-            }
-            set {
-                this.statussFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
         [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
         public RISHTA[] approvedlist {
             get {
@@ -1286,10 +1259,10 @@ namespace WindowsFormsApplication1.serveraunty {
         /// <remarks/>
         public bool statuss {
             get {
-                return this.statussField1;
+                return this.statussField;
             }
             set {
-                this.statussField1 = value;
+                this.statussField = value;
             }
         }
         
@@ -1297,10 +1270,10 @@ namespace WindowsFormsApplication1.serveraunty {
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool statussSpecified {
             get {
-                return this.statussField1Specified;
+                return this.statussFieldSpecified;
             }
             set {
-                this.statussField1Specified = value;
+                this.statussFieldSpecified = value;
             }
         }
     }
@@ -1505,37 +1478,7 @@ namespace WindowsFormsApplication1.serveraunty {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
-    public delegate void fromtobetodoneCompletedEventHandler(object sender, fromtobetodoneCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class fromtobetodoneCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal fromtobetodoneCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public bool fromtobetodoneResult {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((bool)(this.results[0]));
-            }
-        }
-        
-        /// <remarks/>
-        public bool fromtobetodoneResultSpecified {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((bool)(this.results[1]));
-            }
-        }
-    }
+    public delegate void fromtobetodoneCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]

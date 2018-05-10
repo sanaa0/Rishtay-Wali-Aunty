@@ -7,12 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace WindowsFormsApplication1
 {
     public partial class regreq : Form
     {
-        public List<serveraunty.RISHTA> rishtas;
+       public  List<serveraunty.RISHTA> selectedData;
         public regreq()
         {
             InitializeComponent();
@@ -28,29 +27,23 @@ namespace WindowsFormsApplication1
             serveraunty.RISHTA r2 = new serveraunty.RISHTA();
             serveraunty.RISHTA r3 = new serveraunty.RISHTA();
 
-            
-
             r1.Name = "Afifa";
             r1.Age = "afifa";
             r2.Name = "sara";
             r2.Age = "sara";
             r3.Name = "sana";
             r3.Age = "sana";
-            r1.statuss = true;
-            r2.statuss = true;
-            r3.statuss = true;
-
 
             serveraunty.Service1 serve = new serveraunty.Service1();
             BindingSource b = new BindingSource();
-            
+            //List<serveraunty.RISHTA> rishtass;
 
             serve.addrishtatobeapprovedof(r1);
             serve.addrishtatobeapprovedof(r2);
             serve.addrishtatobeapprovedof(r3);
-            rishtas = serve.getlist().ToList<serveraunty.RISHTA>();
+            selectedData = serve.getlist().ToList<serveraunty.RISHTA>();
            // rishtas = rishtass;
-            b.DataSource = serve.getlist().ToList<serveraunty.RISHTA>() ;
+            b.DataSource = selectedData;
 
 
            
@@ -104,7 +97,7 @@ namespace WindowsFormsApplication1
             {
                 serveraunty.RISHTA r;
                 r = serve.getr((Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[1].Value)));
-                //textBox1.Text = r.Name;
+                textBox1.Text = r.Name;
                 details d = new details(r);
                 d.Show();
                 this.Hide();
@@ -114,27 +107,17 @@ namespace WindowsFormsApplication1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            bool val, done;  
-            //MessageBox.Show("here at permsi");
-            serveraunty.Service1 b = new serveraunty.Service1();
             
+            MessageBox.Show("here at permsi");
+            serveraunty.Service1 b = new serveraunty.Service1();
+            // serveraunty.RISHTA y = new serveraunty.RISHTA();
            List<serveraunty.RISHTA> temp1 = b.Ddlj().ToList<serveraunty.RISHTA>();
-           MessageBox.Show(Convert.ToString(temp1.Count));
-          b.fromtobetodone(rishtas.ToArray(),out val,out done);
-            if(val==true & done == true)
-            {
-                MessageBox.Show("Added");
-            }
-            else
-            {
-                MessageBox.Show("false");
-            }
-
-
+            MessageBox.Show(Convert.ToString(temp1.Count));
+            b.fromtobetodone(selectedData.ToArray());
+          //.fromtobetodone()
             List<serveraunty.RISHTA> temp = b.Allrishtay().ToList<serveraunty.RISHTA>();
             MessageBox.Show(Convert.ToString(temp.Count));
             //MessageBox.Show("here at end");
-            
 
 
 

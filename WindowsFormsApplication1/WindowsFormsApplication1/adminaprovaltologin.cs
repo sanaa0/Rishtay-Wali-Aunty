@@ -21,5 +21,19 @@ namespace WindowsFormsApplication1
         {
 
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            regreq r = new regreq();
+            this.Hide();
+            r.Show();
+        }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            paid p = new paid();
+            this.Hide();
+            p.Show();
+        }
     }
 }

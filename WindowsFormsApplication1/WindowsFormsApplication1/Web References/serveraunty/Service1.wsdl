@@ -7,6 +7,72 @@
       <xsd:import schemaLocation="http://localhost:51428/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/serveraunty" />
     </xsd:schema>
   </wsdl:types>
+  <wsdl:message name="IService1_addper_InputMessage">
+    <wsdl:part name="parameters" element="tns:addper" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addper_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addperResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addpes_InputMessage">
+    <wsdl:part name="parameters" element="tns:addpes" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addpes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addpesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addpe_InputMessage">
+    <wsdl:part name="parameters" element="tns:addpe" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addpe_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addpeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_paysender_InputMessage">
+    <wsdl:part name="parameters" element="tns:paysender" />
+  </wsdl:message>
+  <wsdl:message name="IService1_paysender_OutputMessage">
+    <wsdl:part name="parameters" element="tns:paysenderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_payreceiver_InputMessage">
+    <wsdl:part name="parameters" element="tns:payreceiver" />
+  </wsdl:message>
+  <wsdl:message name="IService1_payreceiver_OutputMessage">
+    <wsdl:part name="parameters" element="tns:payreceiverResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_payreq_InputMessage">
+    <wsdl:part name="parameters" element="tns:payreq" />
+  </wsdl:message>
+  <wsdl:message name="IService1_payreq_OutputMessage">
+    <wsdl:part name="parameters" element="tns:payreqResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Allrishtay_InputMessage">
+    <wsdl:part name="parameters" element="tns:Allrishtay" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Allrishtay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AllrishtayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_fromtobetodone_InputMessage">
+    <wsdl:part name="parameters" element="tns:fromtobetodone" />
+  </wsdl:message>
+  <wsdl:message name="IService1_fromtobetodone_OutputMessage">
+    <wsdl:part name="parameters" element="tns:fromtobetodoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getr_InputMessage">
+    <wsdl:part name="parameters" element="tns:getr" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getr_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getrResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Ddlj_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ddlj" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Ddlj_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DdljResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getlist_InputMessage">
+    <wsdl:part name="parameters" element="tns:getlist" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getlist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getlistResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_GetData_InputMessage">
     <wsdl:part name="parameters" element="tns:GetData" />
   </wsdl:message>
@@ -79,6 +145,12 @@
   <wsdl:message name="IService1_loginofadmin_OutputMessage">
     <wsdl:part name="parameters" element="tns:loginofadminResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_getrishta_InputMessage">
+    <wsdl:part name="parameters" element="tns:getrishta" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getrishta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getrishtaResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_addrishtatobeapprovedof_InputMessage">
     <wsdl:part name="parameters" element="tns:addrishtatobeapprovedof" />
   </wsdl:message>
@@ -86,6 +158,50 @@
     <wsdl:part name="parameters" element="tns:addrishtatobeapprovedofResponse" />
   </wsdl:message>
   <wsdl:portType name="IService1">
+    <wsdl:operation name="addper">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/addper" message="tns:IService1_addper_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/addperResponse" message="tns:IService1_addper_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addpes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/addpes" message="tns:IService1_addpes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/addpesResponse" message="tns:IService1_addpes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addpe">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/addpe" message="tns:IService1_addpe_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/addpeResponse" message="tns:IService1_addpe_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="paysender">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/paysender" message="tns:IService1_paysender_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/paysenderResponse" message="tns:IService1_paysender_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="payreceiver">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/payreceiver" message="tns:IService1_payreceiver_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/payreceiverResponse" message="tns:IService1_payreceiver_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="payreq">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/payreq" message="tns:IService1_payreq_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/payreqResponse" message="tns:IService1_payreq_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Allrishtay">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Allrishtay" message="tns:IService1_Allrishtay_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AllrishtayResponse" message="tns:IService1_Allrishtay_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="fromtobetodone">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/fromtobetodone" message="tns:IService1_fromtobetodone_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/fromtobetodoneResponse" message="tns:IService1_fromtobetodone_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getr">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getr" message="tns:IService1_getr_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getrResponse" message="tns:IService1_getr_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ddlj">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Ddlj" message="tns:IService1_Ddlj_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DdljResponse" message="tns:IService1_Ddlj_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getlist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getlist" message="tns:IService1_getlist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getlistResponse" message="tns:IService1_getlist_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataResponse" message="tns:IService1_GetData_OutputMessage" />
@@ -134,6 +250,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/loginofadmin" message="tns:IService1_loginofadmin_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/loginofadminResponse" message="tns:IService1_loginofadmin_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="getrishta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getrishta" message="tns:IService1_getrishta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getrishtaResponse" message="tns:IService1_getrishta_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="addrishtatobeapprovedof">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/addrishtatobeapprovedof" message="tns:IService1_addrishtatobeapprovedof_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/addrishtatobeapprovedofResponse" message="tns:IService1_addrishtatobeapprovedof_OutputMessage" />
@@ -141,6 +261,105 @@
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="addper">
+      <soap:operation soapAction="http://tempuri.org/IService1/addper" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addpes">
+      <soap:operation soapAction="http://tempuri.org/IService1/addpes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addpe">
+      <soap:operation soapAction="http://tempuri.org/IService1/addpe" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="paysender">
+      <soap:operation soapAction="http://tempuri.org/IService1/paysender" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="payreceiver">
+      <soap:operation soapAction="http://tempuri.org/IService1/payreceiver" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="payreq">
+      <soap:operation soapAction="http://tempuri.org/IService1/payreq" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Allrishtay">
+      <soap:operation soapAction="http://tempuri.org/IService1/Allrishtay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fromtobetodone">
+      <soap:operation soapAction="http://tempuri.org/IService1/fromtobetodone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getr">
+      <soap:operation soapAction="http://tempuri.org/IService1/getr" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ddlj">
+      <soap:operation soapAction="http://tempuri.org/IService1/Ddlj" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getlist">
+      <soap:operation soapAction="http://tempuri.org/IService1/getlist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetData">
       <soap:operation soapAction="http://tempuri.org/IService1/GetData" style="document" />
       <wsdl:input>
@@ -242,6 +461,15 @@
     </wsdl:operation>
     <wsdl:operation name="loginofadmin">
       <soap:operation soapAction="http://tempuri.org/IService1/loginofadmin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getrishta">
+      <soap:operation soapAction="http://tempuri.org/IService1/getrishta" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

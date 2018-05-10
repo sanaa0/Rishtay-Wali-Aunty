@@ -20,22 +20,23 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
 
-        
+
 
         private void button1_Click(object sender, EventArgs e)
         {
             serveraunty.AUNTY a = new serveraunty.AUNTY();
             a.Username = textBox1.Text;
-            
+
             a.Code = textBox2.Text;
             textBox1.Text = " ";
             textBox2.Text = " ";
 
 
             serveraunty.Service1 f = new serveraunty.Service1();
-                f.regofadmin( a);
-                MessageBox.Show("REGISTERATION AS AN ADMIN IS APPROVED");
-           
+            f.regofadmin(a);
+
+            MessageBox.Show("REGISTERATION AS AN ADMIN IS APPROVED");
+
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -44,10 +45,11 @@ namespace WindowsFormsApplication1
             frm.Show();
             this.Hide();
         }
+        int count = 0;
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int count = 0;
+            
             if (count == 0)
             {
                 MessageBox.Show("YOUR SECRET CODE IS 5410");
@@ -61,7 +63,7 @@ namespace WindowsFormsApplication1
             else if (count == 2)
             {
                 MessageBox.Show("YOUR SECRET CODE IS 9876");
-               count = 3;
+                count = 3;
             }
             else
             {
@@ -76,13 +78,11 @@ namespace WindowsFormsApplication1
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            form10 frm = new form10;
-            frm.show();
-            this.Hide();
-        }
-    }
 
-        
+        }
+
+
     }
+}
 
 

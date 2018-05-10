@@ -29,6 +29,28 @@ namespace WindowsFormsApplication1.serveraunty {
     [System.Web.Services.WebServiceBindingAttribute(Name="BasicHttpBinding_IService1", Namespace="http://tempuri.org/")]
     public partial class Service1 : System.Web.Services.Protocols.SoapHttpClientProtocol {
         
+        private System.Threading.SendOrPostCallback addperOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback addpesOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback addpeOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback paysenderOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback payreceiverOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback payreqOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback AllrishtayOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback fromtobetodoneOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback getrOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback DdljOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback getlistOperationCompleted;
+        
         private System.Threading.SendOrPostCallback GetDataOperationCompleted;
         
         private System.Threading.SendOrPostCallback GetDataUsingDataContractOperationCompleted;
@@ -52,6 +74,8 @@ namespace WindowsFormsApplication1.serveraunty {
         private System.Threading.SendOrPostCallback regofadminOperationCompleted;
         
         private System.Threading.SendOrPostCallback loginofadminOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback getrishtaOperationCompleted;
         
         private System.Threading.SendOrPostCallback addrishtatobeapprovedofOperationCompleted;
         
@@ -94,6 +118,39 @@ namespace WindowsFormsApplication1.serveraunty {
         }
         
         /// <remarks/>
+        public event addperCompletedEventHandler addperCompleted;
+        
+        /// <remarks/>
+        public event addpesCompletedEventHandler addpesCompleted;
+        
+        /// <remarks/>
+        public event addpeCompletedEventHandler addpeCompleted;
+        
+        /// <remarks/>
+        public event paysenderCompletedEventHandler paysenderCompleted;
+        
+        /// <remarks/>
+        public event payreceiverCompletedEventHandler payreceiverCompleted;
+        
+        /// <remarks/>
+        public event payreqCompletedEventHandler payreqCompleted;
+        
+        /// <remarks/>
+        public event AllrishtayCompletedEventHandler AllrishtayCompleted;
+        
+        /// <remarks/>
+        public event fromtobetodoneCompletedEventHandler fromtobetodoneCompleted;
+        
+        /// <remarks/>
+        public event getrCompletedEventHandler getrCompleted;
+        
+        /// <remarks/>
+        public event DdljCompletedEventHandler DdljCompleted;
+        
+        /// <remarks/>
+        public event getlistCompletedEventHandler getlistCompleted;
+        
+        /// <remarks/>
         public event GetDataCompletedEventHandler GetDataCompleted;
         
         /// <remarks/>
@@ -130,7 +187,328 @@ namespace WindowsFormsApplication1.serveraunty {
         public event loginofadminCompletedEventHandler loginofadminCompleted;
         
         /// <remarks/>
+        public event getrishtaCompletedEventHandler getrishtaCompleted;
+        
+        /// <remarks/>
         public event addrishtatobeapprovedofCompletedEventHandler addrishtatobeapprovedofCompleted;
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/addper", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void addper([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] RISHTA r) {
+            this.Invoke("addper", new object[] {
+                        r});
+        }
+        
+        /// <remarks/>
+        public void addperAsync(RISHTA r) {
+            this.addperAsync(r, null);
+        }
+        
+        /// <remarks/>
+        public void addperAsync(RISHTA r, object userState) {
+            if ((this.addperOperationCompleted == null)) {
+                this.addperOperationCompleted = new System.Threading.SendOrPostCallback(this.OnaddperOperationCompleted);
+            }
+            this.InvokeAsync("addper", new object[] {
+                        r}, this.addperOperationCompleted, userState);
+        }
+        
+        private void OnaddperOperationCompleted(object arg) {
+            if ((this.addperCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.addperCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/addpes", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void addpes([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] RISHTA r) {
+            this.Invoke("addpes", new object[] {
+                        r});
+        }
+        
+        /// <remarks/>
+        public void addpesAsync(RISHTA r) {
+            this.addpesAsync(r, null);
+        }
+        
+        /// <remarks/>
+        public void addpesAsync(RISHTA r, object userState) {
+            if ((this.addpesOperationCompleted == null)) {
+                this.addpesOperationCompleted = new System.Threading.SendOrPostCallback(this.OnaddpesOperationCompleted);
+            }
+            this.InvokeAsync("addpes", new object[] {
+                        r}, this.addpesOperationCompleted, userState);
+        }
+        
+        private void OnaddpesOperationCompleted(object arg) {
+            if ((this.addpesCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.addpesCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/addpe", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void addpe([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] RISHTA r) {
+            this.Invoke("addpe", new object[] {
+                        r});
+        }
+        
+        /// <remarks/>
+        public void addpeAsync(RISHTA r) {
+            this.addpeAsync(r, null);
+        }
+        
+        /// <remarks/>
+        public void addpeAsync(RISHTA r, object userState) {
+            if ((this.addpeOperationCompleted == null)) {
+                this.addpeOperationCompleted = new System.Threading.SendOrPostCallback(this.OnaddpeOperationCompleted);
+            }
+            this.InvokeAsync("addpe", new object[] {
+                        r}, this.addpeOperationCompleted, userState);
+        }
+        
+        private void OnaddpeOperationCompleted(object arg) {
+            if ((this.addpeCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.addpeCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/paysender", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/serveraunty")]
+        public RISHTA[] paysender() {
+            object[] results = this.Invoke("paysender", new object[0]);
+            return ((RISHTA[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void paysenderAsync() {
+            this.paysenderAsync(null);
+        }
+        
+        /// <remarks/>
+        public void paysenderAsync(object userState) {
+            if ((this.paysenderOperationCompleted == null)) {
+                this.paysenderOperationCompleted = new System.Threading.SendOrPostCallback(this.OnpaysenderOperationCompleted);
+            }
+            this.InvokeAsync("paysender", new object[0], this.paysenderOperationCompleted, userState);
+        }
+        
+        private void OnpaysenderOperationCompleted(object arg) {
+            if ((this.paysenderCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.paysenderCompleted(this, new paysenderCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/payreceiver", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/serveraunty")]
+        public RISHTA[] payreceiver() {
+            object[] results = this.Invoke("payreceiver", new object[0]);
+            return ((RISHTA[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void payreceiverAsync() {
+            this.payreceiverAsync(null);
+        }
+        
+        /// <remarks/>
+        public void payreceiverAsync(object userState) {
+            if ((this.payreceiverOperationCompleted == null)) {
+                this.payreceiverOperationCompleted = new System.Threading.SendOrPostCallback(this.OnpayreceiverOperationCompleted);
+            }
+            this.InvokeAsync("payreceiver", new object[0], this.payreceiverOperationCompleted, userState);
+        }
+        
+        private void OnpayreceiverOperationCompleted(object arg) {
+            if ((this.payreceiverCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.payreceiverCompleted(this, new payreceiverCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/payreq", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/serveraunty")]
+        public RISHTA[] payreq() {
+            object[] results = this.Invoke("payreq", new object[0]);
+            return ((RISHTA[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void payreqAsync() {
+            this.payreqAsync(null);
+        }
+        
+        /// <remarks/>
+        public void payreqAsync(object userState) {
+            if ((this.payreqOperationCompleted == null)) {
+                this.payreqOperationCompleted = new System.Threading.SendOrPostCallback(this.OnpayreqOperationCompleted);
+            }
+            this.InvokeAsync("payreq", new object[0], this.payreqOperationCompleted, userState);
+        }
+        
+        private void OnpayreqOperationCompleted(object arg) {
+            if ((this.payreqCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.payreqCompleted(this, new payreqCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/Allrishtay", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/serveraunty")]
+        public RISHTA[] Allrishtay() {
+            object[] results = this.Invoke("Allrishtay", new object[0]);
+            return ((RISHTA[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void AllrishtayAsync() {
+            this.AllrishtayAsync(null);
+        }
+        
+        /// <remarks/>
+        public void AllrishtayAsync(object userState) {
+            if ((this.AllrishtayOperationCompleted == null)) {
+                this.AllrishtayOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAllrishtayOperationCompleted);
+            }
+            this.InvokeAsync("Allrishtay", new object[0], this.AllrishtayOperationCompleted, userState);
+        }
+        
+        private void OnAllrishtayOperationCompleted(object arg) {
+            if ((this.AllrishtayCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.AllrishtayCompleted(this, new AllrishtayCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/fromtobetodone", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void fromtobetodone([System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/serveraunty")] RISHTA[] roo, out bool fromtobetodoneResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool fromtobetodoneResultSpecified) {
+            object[] results = this.Invoke("fromtobetodone", new object[] {
+                        roo});
+            fromtobetodoneResult = ((bool)(results[0]));
+            fromtobetodoneResultSpecified = ((bool)(results[1]));
+        }
+        
+        /// <remarks/>
+        public void fromtobetodoneAsync(RISHTA[] roo) {
+            this.fromtobetodoneAsync(roo, null);
+        }
+        
+        /// <remarks/>
+        public void fromtobetodoneAsync(RISHTA[] roo, object userState) {
+            if ((this.fromtobetodoneOperationCompleted == null)) {
+                this.fromtobetodoneOperationCompleted = new System.Threading.SendOrPostCallback(this.OnfromtobetodoneOperationCompleted);
+            }
+            this.InvokeAsync("fromtobetodone", new object[] {
+                        roo}, this.fromtobetodoneOperationCompleted, userState);
+        }
+        
+        private void OnfromtobetodoneOperationCompleted(object arg) {
+            if ((this.fromtobetodoneCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.fromtobetodoneCompleted(this, new fromtobetodoneCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/getr", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public RISHTA getr([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string name) {
+            object[] results = this.Invoke("getr", new object[] {
+                        name});
+            return ((RISHTA)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getrAsync(string name) {
+            this.getrAsync(name, null);
+        }
+        
+        /// <remarks/>
+        public void getrAsync(string name, object userState) {
+            if ((this.getrOperationCompleted == null)) {
+                this.getrOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetrOperationCompleted);
+            }
+            this.InvokeAsync("getr", new object[] {
+                        name}, this.getrOperationCompleted, userState);
+        }
+        
+        private void OngetrOperationCompleted(object arg) {
+            if ((this.getrCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getrCompleted(this, new getrCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/Ddlj", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/serveraunty")]
+        public RISHTA[] Ddlj() {
+            object[] results = this.Invoke("Ddlj", new object[0]);
+            return ((RISHTA[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void DdljAsync() {
+            this.DdljAsync(null);
+        }
+        
+        /// <remarks/>
+        public void DdljAsync(object userState) {
+            if ((this.DdljOperationCompleted == null)) {
+                this.DdljOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDdljOperationCompleted);
+            }
+            this.InvokeAsync("Ddlj", new object[0], this.DdljOperationCompleted, userState);
+        }
+        
+        private void OnDdljOperationCompleted(object arg) {
+            if ((this.DdljCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.DdljCompleted(this, new DdljCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/getlist", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/serveraunty")]
+        public RISHTA[] getlist() {
+            object[] results = this.Invoke("getlist", new object[0]);
+            return ((RISHTA[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getlistAsync() {
+            this.getlistAsync(null);
+        }
+        
+        /// <remarks/>
+        public void getlistAsync(object userState) {
+            if ((this.getlistOperationCompleted == null)) {
+                this.getlistOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetlistOperationCompleted);
+            }
+            this.InvokeAsync("getlist", new object[0], this.getlistOperationCompleted, userState);
+        }
+        
+        private void OngetlistOperationCompleted(object arg) {
+            if ((this.getlistCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getlistCompleted(this, new getlistCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/GetData", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -369,22 +747,24 @@ namespace WindowsFormsApplication1.serveraunty {
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/seekofrishta", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public RISHTA seekofrishta() {
-            object[] results = this.Invoke("seekofrishta", new object[0]);
+        public RISHTA seekofrishta([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string name) {
+            object[] results = this.Invoke("seekofrishta", new object[] {
+                        name});
             return ((RISHTA)(results[0]));
         }
         
         /// <remarks/>
-        public void seekofrishtaAsync() {
-            this.seekofrishtaAsync(null);
+        public void seekofrishtaAsync(string name) {
+            this.seekofrishtaAsync(name, null);
         }
         
         /// <remarks/>
-        public void seekofrishtaAsync(object userState) {
+        public void seekofrishtaAsync(string name, object userState) {
             if ((this.seekofrishtaOperationCompleted == null)) {
                 this.seekofrishtaOperationCompleted = new System.Threading.SendOrPostCallback(this.OnseekofrishtaOperationCompleted);
             }
-            this.InvokeAsync("seekofrishta", new object[0], this.seekofrishtaOperationCompleted, userState);
+            this.InvokeAsync("seekofrishta", new object[] {
+                        name}, this.seekofrishtaOperationCompleted, userState);
         }
         
         private void OnseekofrishtaOperationCompleted(object arg) {
@@ -479,6 +859,39 @@ namespace WindowsFormsApplication1.serveraunty {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/getrishta", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/serveraunty")]
+        public RISHTA[] getrishta([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string ctgry, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string choice) {
+            object[] results = this.Invoke("getrishta", new object[] {
+                        ctgry,
+                        choice});
+            return ((RISHTA[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getrishtaAsync(string ctgry, string choice) {
+            this.getrishtaAsync(ctgry, choice, null);
+        }
+        
+        /// <remarks/>
+        public void getrishtaAsync(string ctgry, string choice, object userState) {
+            if ((this.getrishtaOperationCompleted == null)) {
+                this.getrishtaOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetrishtaOperationCompleted);
+            }
+            this.InvokeAsync("getrishta", new object[] {
+                        ctgry,
+                        choice}, this.getrishtaOperationCompleted, userState);
+        }
+        
+        private void OngetrishtaOperationCompleted(object arg) {
+            if ((this.getrishtaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getrishtaCompleted(this, new getrishtaCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/addrishtatobeapprovedof", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public void addrishtatobeapprovedof([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] RISHTA r) {
             this.Invoke("addrishtatobeapprovedof", new object[] {
@@ -531,88 +944,6 @@ namespace WindowsFormsApplication1.serveraunty {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/serveraunty")]
-    public partial class CompositeType {
-        
-        private bool boolValueField;
-        
-        private bool boolValueFieldSpecified;
-        
-        private string stringValueField;
-        
-        /// <remarks/>
-        public bool BoolValue {
-            get {
-                return this.boolValueField;
-            }
-            set {
-                this.boolValueField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool BoolValueSpecified {
-            get {
-                return this.boolValueFieldSpecified;
-            }
-            set {
-                this.boolValueFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string StringValue {
-            get {
-                return this.stringValueField;
-            }
-            set {
-                this.stringValueField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/serveraunty")]
-    public partial class AUNTY {
-        
-        private string codeField;
-        
-        private string usernameField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string Code {
-            get {
-                return this.codeField;
-            }
-            set {
-                this.codeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string Username {
-            get {
-                return this.usernameField;
-            }
-            set {
-                this.usernameField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/serveraunty")]
     public partial class RISHTA {
         
         private string ageField;
@@ -648,6 +979,28 @@ namespace WindowsFormsApplication1.serveraunty {
         private bool rishtacameField;
         
         private bool rishtacameFieldSpecified;
+        
+        private bool sitatussField;
+        
+        private bool sitatussFieldSpecified;
+        
+        private bool statusField;
+        
+        private bool statusFieldSpecified;
+        
+        private bool statussField;
+        
+        private bool statussFieldSpecified;
+        
+        private RISHTA[] approvedlistField;
+        
+        private RISHTA[] receivedlistField;
+        
+        private RISHTA[] sentlistField;
+        
+        private bool statussField1;
+        
+        private bool statussField1Specified;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -833,6 +1186,433 @@ namespace WindowsFormsApplication1.serveraunty {
                 this.rishtacameFieldSpecified = value;
             }
         }
+        
+        /// <remarks/>
+        public bool Sitatuss {
+            get {
+                return this.sitatussField;
+            }
+            set {
+                this.sitatussField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool SitatussSpecified {
+            get {
+                return this.sitatussFieldSpecified;
+            }
+            set {
+                this.sitatussFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool Status {
+            get {
+                return this.statusField;
+            }
+            set {
+                this.statusField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool StatusSpecified {
+            get {
+                return this.statusFieldSpecified;
+            }
+            set {
+                this.statusFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool Statuss {
+            get {
+                return this.statussField;
+            }
+            set {
+                this.statussField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool StatussSpecified {
+            get {
+                return this.statussFieldSpecified;
+            }
+            set {
+                this.statussFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        public RISHTA[] approvedlist {
+            get {
+                return this.approvedlistField;
+            }
+            set {
+                this.approvedlistField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        public RISHTA[] receivedlist {
+            get {
+                return this.receivedlistField;
+            }
+            set {
+                this.receivedlistField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        public RISHTA[] sentlist {
+            get {
+                return this.sentlistField;
+            }
+            set {
+                this.sentlistField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool statuss {
+            get {
+                return this.statussField1;
+            }
+            set {
+                this.statussField1 = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool statussSpecified {
+            get {
+                return this.statussField1Specified;
+            }
+            set {
+                this.statussField1Specified = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/serveraunty")]
+    public partial class AUNTY {
+        
+        private string codeField;
+        
+        private string usernameField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Code {
+            get {
+                return this.codeField;
+            }
+            set {
+                this.codeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Username {
+            get {
+                return this.usernameField;
+            }
+            set {
+                this.usernameField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/serveraunty")]
+    public partial class CompositeType {
+        
+        private bool boolValueField;
+        
+        private bool boolValueFieldSpecified;
+        
+        private string stringValueField;
+        
+        /// <remarks/>
+        public bool BoolValue {
+            get {
+                return this.boolValueField;
+            }
+            set {
+                this.boolValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool BoolValueSpecified {
+            get {
+                return this.boolValueFieldSpecified;
+            }
+            set {
+                this.boolValueFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string StringValue {
+            get {
+                return this.stringValueField;
+            }
+            set {
+                this.stringValueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    public delegate void addperCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    public delegate void addpesCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    public delegate void addpeCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    public delegate void paysenderCompletedEventHandler(object sender, paysenderCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class paysenderCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal paysenderCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public RISHTA[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((RISHTA[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    public delegate void payreceiverCompletedEventHandler(object sender, payreceiverCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class payreceiverCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal payreceiverCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public RISHTA[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((RISHTA[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    public delegate void payreqCompletedEventHandler(object sender, payreqCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class payreqCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal payreqCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public RISHTA[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((RISHTA[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    public delegate void AllrishtayCompletedEventHandler(object sender, AllrishtayCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class AllrishtayCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal AllrishtayCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public RISHTA[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((RISHTA[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    public delegate void fromtobetodoneCompletedEventHandler(object sender, fromtobetodoneCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class fromtobetodoneCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal fromtobetodoneCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool fromtobetodoneResult {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public bool fromtobetodoneResultSpecified {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[1]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    public delegate void getrCompletedEventHandler(object sender, getrCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getrCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getrCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public RISHTA Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((RISHTA)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    public delegate void DdljCompletedEventHandler(object sender, DdljCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class DdljCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal DdljCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public RISHTA[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((RISHTA[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    public delegate void getlistCompletedEventHandler(object sender, getlistCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getlistCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getlistCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public RISHTA[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((RISHTA[])(this.results[0]));
+            }
+        }
     }
     
     /// <remarks/>
@@ -1005,6 +1785,32 @@ namespace WindowsFormsApplication1.serveraunty {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((bool)(this.results[1]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    public delegate void getrishtaCompletedEventHandler(object sender, getrishtaCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getrishtaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getrishtaCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public RISHTA[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((RISHTA[])(this.results[0]));
             }
         }
     }

@@ -22,29 +22,7 @@ namespace WindowsFormsApplication1
 
         }
 
-        private bool button1_Click(object sender, EventArgs e)
-        {   bool isvalid = false;
-            bool issvalid = false;
-            serveraunty.Service1 k = new serveraunty.Service1();
-            serveraunty.AUNTY auntay = new serveraunty.AUNTY();
-            auntay.Username = textBox1.Text;
-            auntay.Code = textBox2.Text;
-            k.loginofadmin(auntay, out isvalid, out issvalid);
-
-            if (isvalid)
-            {
-                MessageBox.Show("Successfully logged in as an admin");
-                adminaprovaltologin logi = new adminaprovaltologin();
-                logi.Show();
-                this.Hide();
-
-            }
-            {
-                MessageBox.Show("logging attempt is failed.");
-            }
-            return issvalid;
-        }
-
+        
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             form7 frm = new form7();
@@ -60,14 +38,36 @@ namespace WindowsFormsApplication1
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            form10 frm = new form10();
-            frm.Show();
-            this.Hide();
         }
 
         private void Form5_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            bool isvalid = false;
+            bool issvalid = false;
+            serveraunty.Service1 k = new serveraunty.Service1();
+            serveraunty.AUNTY auntay = new serveraunty.AUNTY();
+            auntay.Username = textBox1.Text;
+            auntay.Code = textBox2.Text;
+            k.loginofadmin(auntay, out isvalid, out issvalid);
+
+            if (issvalid)
+            {
+                MessageBox.Show("Successfully logged in as an admin");
+                adminaprovaltologin logi = new adminaprovaltologin();
+                logi.Show();
+                this.Hide();
+
+            }
+            else
+            {
+                MessageBox.Show("logging attempt is failed.");
+            }
+           
         }
     }
 }

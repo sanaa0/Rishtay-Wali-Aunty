@@ -1,6 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:51428/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/serveraunty" />
+  <xs:element name="addper">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/serveraunty" minOccurs="0" name="r" nillable="true" type="q1:RISHTA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addperResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addpes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/serveraunty" minOccurs="0" name="r" nillable="true" type="q2:RISHTA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addpesResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addpe">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/serveraunty" minOccurs="0" name="r" nillable="true" type="q3:RISHTA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addpeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="paysender">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="paysenderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/serveraunty" minOccurs="0" name="paysenderResult" nillable="true" type="q4:ArrayOfRISHTA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="payreceiver">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="payreceiverResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/serveraunty" minOccurs="0" name="payreceiverResult" nillable="true" type="q5:ArrayOfRISHTA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="payreq">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="payreqResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/serveraunty" minOccurs="0" name="payreqResult" nillable="true" type="q6:ArrayOfRISHTA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Allrishtay">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AllrishtayResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/serveraunty" minOccurs="0" name="AllrishtayResult" nillable="true" type="q7:ArrayOfRISHTA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="fromtobetodone">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/serveraunty" minOccurs="0" name="roo" nillable="true" type="q8:ArrayOfRISHTA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="fromtobetodoneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fromtobetodoneResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getr">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getrResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/serveraunty" minOccurs="0" name="getrResult" nillable="true" type="q9:RISHTA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ddlj">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DdljResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/serveraunty" minOccurs="0" name="DdljResult" nillable="true" type="q10:ArrayOfRISHTA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getlist">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getlistResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/serveraunty" minOccurs="0" name="getlistResult" nillable="true" type="q11:ArrayOfRISHTA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="GetData">
     <xs:complexType>
       <xs:sequence>
@@ -18,21 +154,21 @@
   <xs:element name="GetDataUsingDataContract">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/serveraunty" minOccurs="0" name="composite" nillable="true" type="q1:CompositeType" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/serveraunty" minOccurs="0" name="composite" nillable="true" type="q12:CompositeType" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetDataUsingDataContractResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/serveraunty" minOccurs="0" name="GetDataUsingDataContractResult" nillable="true" type="q2:CompositeType" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/serveraunty" minOccurs="0" name="GetDataUsingDataContractResult" nillable="true" type="q13:CompositeType" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="addrishtaof">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/serveraunty" minOccurs="0" name="r" nillable="true" type="q3:RISHTA" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/serveraunty" minOccurs="0" name="r" nillable="true" type="q14:RISHTA" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -44,7 +180,7 @@
   <xs:element name="deleterishtaof">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/serveraunty" minOccurs="0" name="r" nillable="true" type="q4:RISHTA" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/serveraunty" minOccurs="0" name="r" nillable="true" type="q15:RISHTA" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -81,7 +217,7 @@
   <xs:element name="approverishtaof">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/serveraunty" minOccurs="0" name="r" nillable="true" type="q5:RISHTA" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/serveraunty" minOccurs="0" name="r" nillable="true" type="q16:RISHTA" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -104,13 +240,15 @@
   </xs:element>
   <xs:element name="seekofrishta">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="seekofrishtaResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/serveraunty" minOccurs="0" name="seekofrishtaResult" nillable="true" type="q6:RISHTA" />
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/serveraunty" minOccurs="0" name="seekofrishtaResult" nillable="true" type="q17:RISHTA" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -127,7 +265,7 @@
   <xs:element name="regofadmin">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/serveraunty" minOccurs="0" name="a" nillable="true" type="q7:AUNTY" />
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/serveraunty" minOccurs="0" name="a" nillable="true" type="q18:AUNTY" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -139,7 +277,7 @@
   <xs:element name="loginofadmin">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/serveraunty" minOccurs="0" name="b" nillable="true" type="q8:AUNTY" />
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/serveraunty" minOccurs="0" name="b" nillable="true" type="q19:AUNTY" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -150,10 +288,25 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="getrishta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ctgry" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="choice" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getrishtaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/serveraunty" minOccurs="0" name="getrishtaResult" nillable="true" type="q20:ArrayOfRISHTA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="addrishtatobeapprovedof">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/serveraunty" minOccurs="0" name="r" nillable="true" type="q9:RISHTA" />
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/serveraunty" minOccurs="0" name="r" nillable="true" type="q21:RISHTA" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

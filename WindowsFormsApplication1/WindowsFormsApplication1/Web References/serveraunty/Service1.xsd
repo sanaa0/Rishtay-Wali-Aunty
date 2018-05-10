@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/serveraunty" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/serveraunty" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:complexType name="CompositeType">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="BoolValue" type="xs:boolean" />
-      <xs:element minOccurs="0" name="StringValue" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="CompositeType" nillable="true" type="tns:CompositeType" />
   <xs:complexType name="RISHTA">
     <xs:sequence>
       <xs:element minOccurs="0" name="Age" nillable="true" type="xs:string" />
@@ -24,9 +17,29 @@
       <xs:element minOccurs="0" name="Profession" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Religion" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Rishtacame" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Sitatuss" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Statuss" type="xs:boolean" />
+      <xs:element minOccurs="0" name="approvedlist" nillable="true" type="tns:ArrayOfRISHTA" />
+      <xs:element minOccurs="0" name="receivedlist" nillable="true" type="tns:ArrayOfRISHTA" />
+      <xs:element minOccurs="0" name="sentlist" nillable="true" type="tns:ArrayOfRISHTA" />
+      <xs:element minOccurs="0" name="statuss" type="xs:boolean" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="RISHTA" nillable="true" type="tns:RISHTA" />
+  <xs:complexType name="ArrayOfRISHTA">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RISHTA" nillable="true" type="tns:RISHTA" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRISHTA" nillable="true" type="tns:ArrayOfRISHTA" />
+  <xs:complexType name="CompositeType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BoolValue" type="xs:boolean" />
+      <xs:element minOccurs="0" name="StringValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CompositeType" nillable="true" type="tns:CompositeType" />
   <xs:complexType name="AUNTY">
     <xs:sequence>
       <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />

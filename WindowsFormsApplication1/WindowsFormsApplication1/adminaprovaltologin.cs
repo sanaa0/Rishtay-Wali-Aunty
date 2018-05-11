@@ -17,10 +17,6 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
 
-        private void adminaprovaltologin_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -34,6 +30,13 @@ namespace WindowsFormsApplication1
             paid p = new paid();
             this.Hide();
             p.Show();
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            sender frm = new sender();
+            frm.Show();
+            this.Hide();
         }
     }
 }

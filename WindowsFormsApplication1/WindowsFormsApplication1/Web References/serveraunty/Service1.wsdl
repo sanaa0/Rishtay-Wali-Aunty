@@ -7,6 +7,12 @@
       <xsd:import schemaLocation="http://localhost:51428/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/serveraunty" />
     </xsd:schema>
   </wsdl:types>
+  <wsdl:message name="IService1_addInSent_InputMessage">
+    <wsdl:part name="parameters" element="tns:addInSent" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addInSent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addInSentResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_addper_InputMessage">
     <wsdl:part name="parameters" element="tns:addper" />
   </wsdl:message>
@@ -157,7 +163,53 @@
   <wsdl:message name="IService1_addrishtatobeapprovedof_OutputMessage">
     <wsdl:part name="parameters" element="tns:addrishtatobeapprovedofResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_addInRecieved_InputMessage">
+    <wsdl:part name="parameters" element="tns:addInRecieved" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addInRecieved_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addInRecievedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addInApproved_InputMessage">
+    <wsdl:part name="parameters" element="tns:addInApproved" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addInApproved_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addInApprovedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleteRishta_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteRishta" />
+  </wsdl:message>
+  <wsdl:message name="IService1_deleteRishta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteRishtaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_removeFromSent_InputMessage">
+    <wsdl:part name="parameters" element="tns:removeFromSent" />
+  </wsdl:message>
+  <wsdl:message name="IService1_removeFromSent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:removeFromSentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_removeFromRecieved_InputMessage">
+    <wsdl:part name="parameters" element="tns:removeFromRecieved" />
+  </wsdl:message>
+  <wsdl:message name="IService1_removeFromRecieved_OutputMessage">
+    <wsdl:part name="parameters" element="tns:removeFromRecievedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AllSender_InputMessage">
+    <wsdl:part name="parameters" element="tns:AllSender" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AllSender_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AllSenderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addInAllSenders_InputMessage">
+    <wsdl:part name="parameters" element="tns:addInAllSenders" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addInAllSenders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addInAllSendersResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
+    <wsdl:operation name="addInSent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/addInSent" message="tns:IService1_addInSent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/addInSentResponse" message="tns:IService1_addInSent_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="addper">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/addper" message="tns:IService1_addper_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/addperResponse" message="tns:IService1_addper_OutputMessage" />
@@ -258,9 +310,46 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/addrishtatobeapprovedof" message="tns:IService1_addrishtatobeapprovedof_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/addrishtatobeapprovedofResponse" message="tns:IService1_addrishtatobeapprovedof_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="addInRecieved">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/addInRecieved" message="tns:IService1_addInRecieved_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/addInRecievedResponse" message="tns:IService1_addInRecieved_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addInApproved">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/addInApproved" message="tns:IService1_addInApproved_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/addInApprovedResponse" message="tns:IService1_addInApproved_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteRishta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/deleteRishta" message="tns:IService1_deleteRishta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/deleteRishtaResponse" message="tns:IService1_deleteRishta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="removeFromSent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/removeFromSent" message="tns:IService1_removeFromSent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/removeFromSentResponse" message="tns:IService1_removeFromSent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="removeFromRecieved">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/removeFromRecieved" message="tns:IService1_removeFromRecieved_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/removeFromRecievedResponse" message="tns:IService1_removeFromRecieved_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AllSender">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AllSender" message="tns:IService1_AllSender_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AllSenderResponse" message="tns:IService1_AllSender_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addInAllSenders">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/addInAllSenders" message="tns:IService1_addInAllSenders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/addInAllSendersResponse" message="tns:IService1_addInAllSenders_OutputMessage" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="addInSent">
+      <soap:operation soapAction="http://tempuri.org/IService1/addInSent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="addper">
       <soap:operation soapAction="http://tempuri.org/IService1/addper" style="document" />
       <wsdl:input>
@@ -479,6 +568,69 @@
     </wsdl:operation>
     <wsdl:operation name="addrishtatobeapprovedof">
       <soap:operation soapAction="http://tempuri.org/IService1/addrishtatobeapprovedof" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addInRecieved">
+      <soap:operation soapAction="http://tempuri.org/IService1/addInRecieved" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addInApproved">
+      <soap:operation soapAction="http://tempuri.org/IService1/addInApproved" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteRishta">
+      <soap:operation soapAction="http://tempuri.org/IService1/deleteRishta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeFromSent">
+      <soap:operation soapAction="http://tempuri.org/IService1/removeFromSent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeFromRecieved">
+      <soap:operation soapAction="http://tempuri.org/IService1/removeFromRecieved" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllSender">
+      <soap:operation soapAction="http://tempuri.org/IService1/AllSender" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addInAllSenders">
+      <soap:operation soapAction="http://tempuri.org/IService1/addInAllSenders" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

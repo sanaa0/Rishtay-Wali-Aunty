@@ -63,6 +63,7 @@
             this.linkLabel2.TabIndex = 2;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "CONTACT REQUEST";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // linkLabel3
             // 
@@ -86,7 +87,6 @@
             this.Controls.Add(this.textBox1);
             this.Name = "adminaprovaltologin";
             this.Text = "adminaprovaltologin";
-            this.Load += new System.EventHandler(this.adminaprovaltologin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

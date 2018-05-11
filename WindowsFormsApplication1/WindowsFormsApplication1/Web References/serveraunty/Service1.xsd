@@ -4,6 +4,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="Age" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Allowedcontact" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Approvedlist" nillable="true" type="tns:ArrayOfRISHTA" />
       <xs:element minOccurs="0" name="Cast" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Contact" nillable="true" type="xs:string" />
@@ -15,12 +16,13 @@
       <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Profession" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Receivedlist" nillable="true" type="tns:ArrayOfRISHTA" />
       <xs:element minOccurs="0" name="Religion" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Rishtacame" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Sentlist" nillable="true" type="tns:ArrayOfRISHTA" />
       <xs:element minOccurs="0" name="Sitatuss" type="xs:boolean" />
       <xs:element minOccurs="0" name="Status" type="xs:boolean" />
-      <xs:element minOccurs="0" name="approvedlist" nillable="true" type="tns:ArrayOfRISHTA" />
-      <xs:element minOccurs="0" name="receivedlist" nillable="true" type="tns:ArrayOfRISHTA" />
+      <xs:element minOccurs="0" name="Statuss" type="xs:boolean" />
       <xs:element minOccurs="0" name="sentlist" nillable="true" type="tns:ArrayOfRISHTA" />
       <xs:element minOccurs="0" name="statuss" type="xs:boolean" />
     </xs:sequence>

@@ -11,6 +11,7 @@ namespace WindowsFormsApplication1
 {
     public partial class regreq : Form
     {
+        List<serveraunty.RISHTA> fs;
        public  List<serveraunty.RISHTA> selectedData;
         public regreq()
         {
@@ -93,7 +94,7 @@ namespace WindowsFormsApplication1
         {
             serveraunty.Service1 serve = new serveraunty.Service1();
 
-            if (e.ColumnIndex == 0)
+            if (e.ColumnIndex == 1)
             {
                 serveraunty.RISHTA r;
                 r = serve.getr((Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[1].Value)));
@@ -102,21 +103,31 @@ namespace WindowsFormsApplication1
                 d.Show();
                 this.Hide();
             }
+            if (e.ColumnIndex==2)
+            {
+                serveraunty.RISHTA r;
+                r = serve.getr((Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[1].Value)));
+                fs = serve.Allrishtay().ToList<serveraunty.RISHTA>();
+                serve.addrishtaof(r);
+
+
+
+            }
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             
-            MessageBox.Show("here at permsi");
+            MessageBox.Show("here at permsion");
             serveraunty.Service1 b = new serveraunty.Service1();
             // serveraunty.RISHTA y = new serveraunty.RISHTA();
-           List<serveraunty.RISHTA> temp1 = b.Ddlj().ToList<serveraunty.RISHTA>();
-            MessageBox.Show(Convert.ToString(temp1.Count));
-            b.fromtobetodone(selectedData.ToArray());
+           //List<serveraunty.RISHTA> temp1 = b.Ddlj().ToList<serveraunty.RISHTA>();
+            MessageBox.Show("the allowed users are now registered");
+          //  b.fromtobetodone(selectedData.ToArray());
           //.fromtobetodone()
-            List<serveraunty.RISHTA> temp = b.Allrishtay().ToList<serveraunty.RISHTA>();
-            MessageBox.Show(Convert.ToString(temp.Count));
+            //List<serveraunty.RISHTA> temp = b.Allrishtay().ToList<serveraunty.RISHTA>();
+            //MessageBox.Show(Convert.ToString(temp.Count));
             //MessageBox.Show("here at end");
 
 

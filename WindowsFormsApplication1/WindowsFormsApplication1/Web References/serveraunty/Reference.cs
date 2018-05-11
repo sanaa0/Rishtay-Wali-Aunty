@@ -23,11 +23,13 @@ namespace WindowsFormsApplication1.serveraunty {
     
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="BasicHttpBinding_IService1", Namespace="http://tempuri.org/")]
     public partial class Service1 : System.Web.Services.Protocols.SoapHttpClientProtocol {
+        
+        private System.Threading.SendOrPostCallback addInSentOperationCompleted;
         
         private System.Threading.SendOrPostCallback addperOperationCompleted;
         
@@ -79,6 +81,20 @@ namespace WindowsFormsApplication1.serveraunty {
         
         private System.Threading.SendOrPostCallback addrishtatobeapprovedofOperationCompleted;
         
+        private System.Threading.SendOrPostCallback addInRecievedOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback addInApprovedOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback deleteRishtaOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback removeFromSentOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback removeFromRecievedOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback AllSenderOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback addInAllSendersOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -116,6 +132,9 @@ namespace WindowsFormsApplication1.serveraunty {
                 this.useDefaultCredentialsSetExplicitly = true;
             }
         }
+        
+        /// <remarks/>
+        public event addInSentCompletedEventHandler addInSentCompleted;
         
         /// <remarks/>
         public event addperCompletedEventHandler addperCompleted;
@@ -191,6 +210,57 @@ namespace WindowsFormsApplication1.serveraunty {
         
         /// <remarks/>
         public event addrishtatobeapprovedofCompletedEventHandler addrishtatobeapprovedofCompleted;
+        
+        /// <remarks/>
+        public event addInRecievedCompletedEventHandler addInRecievedCompleted;
+        
+        /// <remarks/>
+        public event addInApprovedCompletedEventHandler addInApprovedCompleted;
+        
+        /// <remarks/>
+        public event deleteRishtaCompletedEventHandler deleteRishtaCompleted;
+        
+        /// <remarks/>
+        public event removeFromSentCompletedEventHandler removeFromSentCompleted;
+        
+        /// <remarks/>
+        public event removeFromRecievedCompletedEventHandler removeFromRecievedCompleted;
+        
+        /// <remarks/>
+        public event AllSenderCompletedEventHandler AllSenderCompleted;
+        
+        /// <remarks/>
+        public event addInAllSendersCompletedEventHandler addInAllSendersCompleted;
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/addInSent", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void addInSent([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] RISHTA r1, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] RISHTA r2) {
+            this.Invoke("addInSent", new object[] {
+                        r1,
+                        r2});
+        }
+        
+        /// <remarks/>
+        public void addInSentAsync(RISHTA r1, RISHTA r2) {
+            this.addInSentAsync(r1, r2, null);
+        }
+        
+        /// <remarks/>
+        public void addInSentAsync(RISHTA r1, RISHTA r2, object userState) {
+            if ((this.addInSentOperationCompleted == null)) {
+                this.addInSentOperationCompleted = new System.Threading.SendOrPostCallback(this.OnaddInSentOperationCompleted);
+            }
+            this.InvokeAsync("addInSent", new object[] {
+                        r1,
+                        r2}, this.addInSentOperationCompleted, userState);
+        }
+        
+        private void OnaddInSentOperationCompleted(object arg) {
+            if ((this.addInSentCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.addInSentCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/addper", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -860,26 +930,28 @@ namespace WindowsFormsApplication1.serveraunty {
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/getrishta", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
         [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/serveraunty")]
-        public RISHTA[] getrishta([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string ctgry, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string choice) {
+        public RISHTA[] getrishta([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string ctgry, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string choice, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] RISHTA curr) {
             object[] results = this.Invoke("getrishta", new object[] {
                         ctgry,
-                        choice});
+                        choice,
+                        curr});
             return ((RISHTA[])(results[0]));
         }
         
         /// <remarks/>
-        public void getrishtaAsync(string ctgry, string choice) {
-            this.getrishtaAsync(ctgry, choice, null);
+        public void getrishtaAsync(string ctgry, string choice, RISHTA curr) {
+            this.getrishtaAsync(ctgry, choice, curr, null);
         }
         
         /// <remarks/>
-        public void getrishtaAsync(string ctgry, string choice, object userState) {
+        public void getrishtaAsync(string ctgry, string choice, RISHTA curr, object userState) {
             if ((this.getrishtaOperationCompleted == null)) {
                 this.getrishtaOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetrishtaOperationCompleted);
             }
             this.InvokeAsync("getrishta", new object[] {
                         ctgry,
-                        choice}, this.getrishtaOperationCompleted, userState);
+                        choice,
+                        curr}, this.getrishtaOperationCompleted, userState);
         }
         
         private void OngetrishtaOperationCompleted(object arg) {
@@ -918,6 +990,211 @@ namespace WindowsFormsApplication1.serveraunty {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/addInRecieved", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void addInRecieved([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] RISHTA r1, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] RISHTA r2) {
+            this.Invoke("addInRecieved", new object[] {
+                        r1,
+                        r2});
+        }
+        
+        /// <remarks/>
+        public void addInRecievedAsync(RISHTA r1, RISHTA r2) {
+            this.addInRecievedAsync(r1, r2, null);
+        }
+        
+        /// <remarks/>
+        public void addInRecievedAsync(RISHTA r1, RISHTA r2, object userState) {
+            if ((this.addInRecievedOperationCompleted == null)) {
+                this.addInRecievedOperationCompleted = new System.Threading.SendOrPostCallback(this.OnaddInRecievedOperationCompleted);
+            }
+            this.InvokeAsync("addInRecieved", new object[] {
+                        r1,
+                        r2}, this.addInRecievedOperationCompleted, userState);
+        }
+        
+        private void OnaddInRecievedOperationCompleted(object arg) {
+            if ((this.addInRecievedCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.addInRecievedCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/addInApproved", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void addInApproved([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] RISHTA r1, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] RISHTA r2) {
+            this.Invoke("addInApproved", new object[] {
+                        r1,
+                        r2});
+        }
+        
+        /// <remarks/>
+        public void addInApprovedAsync(RISHTA r1, RISHTA r2) {
+            this.addInApprovedAsync(r1, r2, null);
+        }
+        
+        /// <remarks/>
+        public void addInApprovedAsync(RISHTA r1, RISHTA r2, object userState) {
+            if ((this.addInApprovedOperationCompleted == null)) {
+                this.addInApprovedOperationCompleted = new System.Threading.SendOrPostCallback(this.OnaddInApprovedOperationCompleted);
+            }
+            this.InvokeAsync("addInApproved", new object[] {
+                        r1,
+                        r2}, this.addInApprovedOperationCompleted, userState);
+        }
+        
+        private void OnaddInApprovedOperationCompleted(object arg) {
+            if ((this.addInApprovedCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.addInApprovedCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/deleteRishta", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void deleteRishta([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] RISHTA r) {
+            this.Invoke("deleteRishta", new object[] {
+                        r});
+        }
+        
+        /// <remarks/>
+        public void deleteRishtaAsync(RISHTA r) {
+            this.deleteRishtaAsync(r, null);
+        }
+        
+        /// <remarks/>
+        public void deleteRishtaAsync(RISHTA r, object userState) {
+            if ((this.deleteRishtaOperationCompleted == null)) {
+                this.deleteRishtaOperationCompleted = new System.Threading.SendOrPostCallback(this.OndeleteRishtaOperationCompleted);
+            }
+            this.InvokeAsync("deleteRishta", new object[] {
+                        r}, this.deleteRishtaOperationCompleted, userState);
+        }
+        
+        private void OndeleteRishtaOperationCompleted(object arg) {
+            if ((this.deleteRishtaCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.deleteRishtaCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/removeFromSent", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void removeFromSent([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] RISHTA r1, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] RISHTA r2) {
+            this.Invoke("removeFromSent", new object[] {
+                        r1,
+                        r2});
+        }
+        
+        /// <remarks/>
+        public void removeFromSentAsync(RISHTA r1, RISHTA r2) {
+            this.removeFromSentAsync(r1, r2, null);
+        }
+        
+        /// <remarks/>
+        public void removeFromSentAsync(RISHTA r1, RISHTA r2, object userState) {
+            if ((this.removeFromSentOperationCompleted == null)) {
+                this.removeFromSentOperationCompleted = new System.Threading.SendOrPostCallback(this.OnremoveFromSentOperationCompleted);
+            }
+            this.InvokeAsync("removeFromSent", new object[] {
+                        r1,
+                        r2}, this.removeFromSentOperationCompleted, userState);
+        }
+        
+        private void OnremoveFromSentOperationCompleted(object arg) {
+            if ((this.removeFromSentCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.removeFromSentCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/removeFromRecieved", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void removeFromRecieved([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] RISHTA r1, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] RISHTA r2) {
+            this.Invoke("removeFromRecieved", new object[] {
+                        r1,
+                        r2});
+        }
+        
+        /// <remarks/>
+        public void removeFromRecievedAsync(RISHTA r1, RISHTA r2) {
+            this.removeFromRecievedAsync(r1, r2, null);
+        }
+        
+        /// <remarks/>
+        public void removeFromRecievedAsync(RISHTA r1, RISHTA r2, object userState) {
+            if ((this.removeFromRecievedOperationCompleted == null)) {
+                this.removeFromRecievedOperationCompleted = new System.Threading.SendOrPostCallback(this.OnremoveFromRecievedOperationCompleted);
+            }
+            this.InvokeAsync("removeFromRecieved", new object[] {
+                        r1,
+                        r2}, this.removeFromRecievedOperationCompleted, userState);
+        }
+        
+        private void OnremoveFromRecievedOperationCompleted(object arg) {
+            if ((this.removeFromRecievedCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.removeFromRecievedCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/AllSender", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/serveraunty")]
+        public RISHTA[] AllSender() {
+            object[] results = this.Invoke("AllSender", new object[0]);
+            return ((RISHTA[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void AllSenderAsync() {
+            this.AllSenderAsync(null);
+        }
+        
+        /// <remarks/>
+        public void AllSenderAsync(object userState) {
+            if ((this.AllSenderOperationCompleted == null)) {
+                this.AllSenderOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAllSenderOperationCompleted);
+            }
+            this.InvokeAsync("AllSender", new object[0], this.AllSenderOperationCompleted, userState);
+        }
+        
+        private void OnAllSenderOperationCompleted(object arg) {
+            if ((this.AllSenderCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.AllSenderCompleted(this, new AllSenderCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/addInAllSenders", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void addInAllSenders([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] RISHTA r) {
+            this.Invoke("addInAllSenders", new object[] {
+                        r});
+        }
+        
+        /// <remarks/>
+        public void addInAllSendersAsync(RISHTA r) {
+            this.addInAllSendersAsync(r, null);
+        }
+        
+        /// <remarks/>
+        public void addInAllSendersAsync(RISHTA r, object userState) {
+            if ((this.addInAllSendersOperationCompleted == null)) {
+                this.addInAllSendersOperationCompleted = new System.Threading.SendOrPostCallback(this.OnaddInAllSendersOperationCompleted);
+            }
+            this.InvokeAsync("addInAllSenders", new object[] {
+                        r}, this.addInAllSendersOperationCompleted, userState);
+        }
+        
+        private void OnaddInAllSendersOperationCompleted(object arg) {
+            if ((this.addInAllSendersCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.addInAllSendersCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -937,7 +1214,7 @@ namespace WindowsFormsApplication1.serveraunty {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2556.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -949,6 +1226,8 @@ namespace WindowsFormsApplication1.serveraunty {
         private bool allowedcontactField;
         
         private bool allowedcontactFieldSpecified;
+        
+        private RISHTA[] approvedlistField;
         
         private string castField;
         
@@ -972,11 +1251,15 @@ namespace WindowsFormsApplication1.serveraunty {
         
         private string professionField;
         
+        private RISHTA[] receivedlistField;
+        
         private string religionField;
         
         private bool rishtacameField;
         
         private bool rishtacameFieldSpecified;
+        
+        private RISHTA[] sentlistField;
         
         private bool sitatussField;
         
@@ -986,15 +1269,15 @@ namespace WindowsFormsApplication1.serveraunty {
         
         private bool statusFieldSpecified;
         
-        private RISHTA[] approvedlistField;
-        
-        private RISHTA[] receivedlistField;
-        
-        private RISHTA[] sentlistField;
-        
         private bool statussField;
         
         private bool statussFieldSpecified;
+        
+        private RISHTA[] sentlistField1;
+        
+        private bool statussField1;
+        
+        private bool statussField1Specified;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -1025,6 +1308,17 @@ namespace WindowsFormsApplication1.serveraunty {
             }
             set {
                 this.allowedcontactFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        public RISHTA[] Approvedlist {
+            get {
+                return this.approvedlistField;
+            }
+            set {
+                this.approvedlistField = value;
             }
         }
         
@@ -1150,6 +1444,17 @@ namespace WindowsFormsApplication1.serveraunty {
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        public RISHTA[] Receivedlist {
+            get {
+                return this.receivedlistField;
+            }
+            set {
+                this.receivedlistField = value;
+            }
+        }
+        
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public string Religion {
             get {
@@ -1178,6 +1483,17 @@ namespace WindowsFormsApplication1.serveraunty {
             }
             set {
                 this.rishtacameFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        public RISHTA[] Sentlist {
+            get {
+                return this.sentlistField;
+            }
+            set {
+                this.sentlistField = value;
             }
         }
         
@@ -1224,40 +1540,7 @@ namespace WindowsFormsApplication1.serveraunty {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        public RISHTA[] approvedlist {
-            get {
-                return this.approvedlistField;
-            }
-            set {
-                this.approvedlistField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        public RISHTA[] receivedlist {
-            get {
-                return this.receivedlistField;
-            }
-            set {
-                this.receivedlistField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        public RISHTA[] sentlist {
-            get {
-                return this.sentlistField;
-            }
-            set {
-                this.sentlistField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public bool statuss {
+        public bool Statuss {
             get {
                 return this.statussField;
             }
@@ -1268,7 +1551,7 @@ namespace WindowsFormsApplication1.serveraunty {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool statussSpecified {
+        public bool StatussSpecified {
             get {
                 return this.statussFieldSpecified;
             }
@@ -1276,10 +1559,42 @@ namespace WindowsFormsApplication1.serveraunty {
                 this.statussFieldSpecified = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        public RISHTA[] sentlist {
+            get {
+                return this.sentlistField1;
+            }
+            set {
+                this.sentlistField1 = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool statuss {
+            get {
+                return this.statussField1;
+            }
+            set {
+                this.statussField1 = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool statussSpecified {
+            get {
+                return this.statussField1Specified;
+            }
+            set {
+                this.statussField1Specified = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2556.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1314,7 +1629,7 @@ namespace WindowsFormsApplication1.serveraunty {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2556.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1361,23 +1676,27 @@ namespace WindowsFormsApplication1.serveraunty {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void addInSentCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void addperCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void addpesCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void addpeCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void paysenderCompletedEventHandler(object sender, paysenderCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class paysenderCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1399,11 +1718,11 @@ namespace WindowsFormsApplication1.serveraunty {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void payreceiverCompletedEventHandler(object sender, payreceiverCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class payreceiverCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1425,11 +1744,11 @@ namespace WindowsFormsApplication1.serveraunty {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void payreqCompletedEventHandler(object sender, payreqCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class payreqCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1451,11 +1770,11 @@ namespace WindowsFormsApplication1.serveraunty {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void AllrishtayCompletedEventHandler(object sender, AllrishtayCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class AllrishtayCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1477,15 +1796,15 @@ namespace WindowsFormsApplication1.serveraunty {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void fromtobetodoneCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void getrCompletedEventHandler(object sender, getrCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class getrCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1507,11 +1826,11 @@ namespace WindowsFormsApplication1.serveraunty {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void DdljCompletedEventHandler(object sender, DdljCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class DdljCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1533,11 +1852,11 @@ namespace WindowsFormsApplication1.serveraunty {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void getlistCompletedEventHandler(object sender, getlistCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class getlistCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1559,11 +1878,11 @@ namespace WindowsFormsApplication1.serveraunty {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void GetDataCompletedEventHandler(object sender, GetDataCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GetDataCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1585,11 +1904,11 @@ namespace WindowsFormsApplication1.serveraunty {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void GetDataUsingDataContractCompletedEventHandler(object sender, GetDataUsingDataContractCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GetDataUsingDataContractCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1611,19 +1930,19 @@ namespace WindowsFormsApplication1.serveraunty {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void addrishtaofCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void deleterishtaofCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void loginofCompletedEventHandler(object sender, loginofCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class loginofCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1653,23 +1972,23 @@ namespace WindowsFormsApplication1.serveraunty {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void editprofileofCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void approverishtaofCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void getpaymentofCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void seekofrishtaCompletedEventHandler(object sender, seekofrishtaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class seekofrishtaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1691,19 +2010,19 @@ namespace WindowsFormsApplication1.serveraunty {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void allowofdetailsCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void regofadminCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void loginofadminCompletedEventHandler(object sender, loginofadminCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class loginofadminCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1733,11 +2052,11 @@ namespace WindowsFormsApplication1.serveraunty {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void getrishtaCompletedEventHandler(object sender, getrishtaCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class getrishtaCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1759,8 +2078,58 @@ namespace WindowsFormsApplication1.serveraunty {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void addrishtatobeapprovedofCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void addInRecievedCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void addInApprovedCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void deleteRishtaCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void removeFromSentCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void removeFromRecievedCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void AllSenderCompletedEventHandler(object sender, AllSenderCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class AllSenderCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal AllSenderCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public RISHTA[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((RISHTA[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void addInAllSendersCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
 }
 
 #pragma warning restore 1591
